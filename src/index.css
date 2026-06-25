@@ -1,1 +1,71 @@
-@import "tailwindcss"
+@import "tailwindcss";
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+};
+/* Hide horizontal scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Infinite auto scroll */
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left Fade */
+.gallery-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    #e8e8e8 0%,
+    rgba(232, 232, 232, 0.9) 30%,
+    rgba(232, 232, 232, 0) 100%
+  );
+}
+
+/* Right Fade */
+.gallery-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to left,
+    #e8e8e8 0%,
+    rgba(232, 232, 232, 0.9) 30%,
+    rgba(232, 232, 232, 0) 100%
+  );
+};
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+};

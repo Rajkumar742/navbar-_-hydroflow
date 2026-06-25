@@ -1,7 +1,10 @@
 import Navbar from "../Navbar";
 import Icon_bar from "./Icons_bar";
+import Gallery from "../pages/Gallery";
 import About_tin from "../pages/About_tin";
 import Content from "../pages/Content";
+import Testimonials from "../pages/Testimonials";
+
 function Home(){
     return(
         <div
@@ -28,6 +31,8 @@ function Home(){
 <Icon_bar></Icon_bar>
 <About_tin></About_tin>
 <Content></Content>
+<Testimonials></Testimonials>
+<Gallery></Gallery>
 
 
 
