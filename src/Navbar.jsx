@@ -1,6 +1,6 @@
 function Navbar(){
   return(
-    <div className="w-full flex justify-center pt-8 text-black ">
+    <div className="w-full flex justify-center  text-black fixed top-1 z-10 ">
       <nav className="w-[88%] bg-white flex md:justify-between py-3 px-3 shadow-2xl rounded-xl items-center  ">
         <h1>HYDRA</h1>
 
